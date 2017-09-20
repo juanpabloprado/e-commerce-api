@@ -13,7 +13,13 @@ Aplicación cuya funcionalidad principal sea una API que ejecute un scraper hac
 - [ ] Vista de los productos guardados en la DB.
 - [x] Seguridad (Cualquier tipo de auth).
 
-Para correr el proyecto
+Para correr el proyecto, primero hay que compilar y despues ejecutar el jar, esto se puede hacer en una sola linea de comandos:
 ```bash
 ./gradlew clean build && java -jar build/libs/e-commerce-api-0.0.1-SNAPSHOT.jar
+```
+Por defecto, correra con una base de datos embebida H2.
+
+Si quieres correr el proyecto conectado a MySQL, deberas usar el perfil 'local'
+```bash
+java -jar -Dspring.profiles.active=local demo-0.0.1-SNAPSHOT.jar
 ```
