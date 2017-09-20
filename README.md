@@ -2,7 +2,7 @@
 
 Aplicación cuya funcionalidad principal sea una API que ejecute un scraper hacia una tienda de e-commerce (Amazon, Liverpool, Linio, nike.com, etc.) y obtenga información básica de los productos (nombre, descripción, precio).
 
-- [ ] La aplicación debe persistir la información en una DB.
+- [x] La aplicación debe persistir la información en una DB.
 - [x] Deberá incluir dos endpoints:
 - [x] Ejecutar el scraper (ejemplo: GET/sources/) y descargar 10 productos del catálogo.
 - [x] Devolver la información guardada en un JSON (ejemplo: GET/products/).
