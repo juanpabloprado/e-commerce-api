@@ -78,11 +78,10 @@ public class Product extends BaseEntity {
     Product product = (Product) o;
     return Objects.equal(name, product.name) &&
         Objects.equal(price, product.price) &&
-        Objects.equal(description, product.description) &&
-        Objects.equal(store, product.store);
+        Objects.equal(description, product.description);
   }
 
   @Override public int hashCode() {
-    return Objects.hashCode(name, price, description, store);
+    return Objects.hashCode(name, price, description);
   }
 }
