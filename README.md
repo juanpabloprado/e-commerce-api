@@ -12,3 +12,8 @@ Aplicación cuya funcionalidad principal sea una API que ejecute un scraper hac
 - [x] Evaluar si el producto encontrado se encuentra en la DB y no reescribirlo.
 - [ ] Vista de los productos guardados en la DB.
 - [x] Seguridad (Cualquier tipo de auth).
+
+Para correr el proyecto
+```bash
+./gradlew clean build && java -jar build/libs/e-commerce-api-0.0.1-SNAPSHOT.jar
+```
