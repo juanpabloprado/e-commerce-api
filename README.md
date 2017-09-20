@@ -19,7 +19,7 @@ Para correr el proyecto, primero hay que compilar y despues ejecutar el jar, est
 ```
 Por defecto, correra con una base de datos embebida H2.
 
-Si quieres correr el proyecto conectado a MySQL, deberas usar el perfil 'local'
+Si quieres correr el proyecto conectado a MySQL, deberas usar el perfil 'local'. Asegurate de tener la base de datos y credenciales correctas https://github.com/juanpabloprado/e-commerce-api/wiki/Create-a-MySQL-Database-and-User
 ```bash
 java -jar -Dspring.profiles.active=local build/libs/e-commerce-api-0.0.1-SNAPSHOT.jar
 ```
