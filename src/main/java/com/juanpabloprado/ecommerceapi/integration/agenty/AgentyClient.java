@@ -21,6 +21,10 @@ import org.springframework.web.client.RestTemplate;
 @Service
 public class AgentyClient {
 
+  public static final String AMAZON_STORE = "https://api.agenty.com/v1/output/e01f679a82?offset=0&limit=1000";
+  public static final String LIVERPOOL_STORE = "https://api.agenty.com/v1/output/ad5589bc99?offset=0&limit=1000";
+  public static final String LINIO_STORE = "https://api.agenty.com/v1/output/b24dd5ccf9?offset=0&limit=1000";
+
   private final RestTemplate restTemplate;
 
   public AgentyClient(RestTemplateBuilder restTemplateBuilder) {
@@ -38,8 +42,8 @@ public class AgentyClient {
     }
   }
 
-  public List<Result> getRecentResults() {
-    ResponseEntity<Agent> response = invoke(createRequestEntity("https://api.agenty.com/v1/output/e01f679a82?offset=0&limit=1000"), Agent.class);
+  public List<Result> getRecentResults(String store) {
+    ResponseEntity<Agent> response = invoke(createRequestEntity(store), Agent.class);
     return Arrays.asList(response.getBody().getResult());
   }
 
