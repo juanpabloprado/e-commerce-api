@@ -21,5 +21,5 @@ Por defecto, correra con una base de datos embebida H2.
 
 Si quieres correr el proyecto conectado a MySQL, deberas usar el perfil 'local'
 ```bash
-java -jar -Dspring.profiles.active=local demo-0.0.1-SNAPSHOT.jar
+java -jar -Dspring.profiles.active=local build/libs/e-commerce-api-0.0.1-SNAPSHOT.jar
 ```
