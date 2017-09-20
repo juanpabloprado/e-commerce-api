@@ -23,3 +23,4 @@ Si quieres correr el proyecto conectado a MySQL, deberas usar el perfil 'local'.
 ```bash
 java -jar -Dspring.profiles.active=local build/libs/e-commerce-api-0.0.1-SNAPSHOT.jar
 ```
+Espere a que el servidor comienze, una vez iniciada la aplicación. Abre el navagador y visita: http://localhost:8080/api/v1/sources para obtener los datos, luego comienza a explorar la API en http://localhost:8080/api/v1
