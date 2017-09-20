@@ -13,9 +13,9 @@ public class ProductServiceImpl implements ProductService {
       Number number = NumberFormat.getCurrencyInstance(new Locale("es", "MX")).parse(result.getPrice());
       BigDecimal price = new BigDecimal(number.doubleValue());
 
-      return new Product(result.getName(), price, null);
+      return new Product(result.getName(), price, null, result.getImageUrl());
     } catch (Exception ex ) {
-      return new Product(result.getName(), new BigDecimal("0.00"), result.getPrice());
+      return new Product(result.getName(), new BigDecimal("0.00"), result.getPrice(), result.getImageUrl());
     }
 
   }

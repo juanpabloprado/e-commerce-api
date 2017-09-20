@@ -1,0 +1,1 @@
+alter table product add image_url varchar(512);

@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class Result {
   private String name;
   private String price;
+  private String imageUrl;
 
   public Result() {
   }
@@ -26,10 +27,19 @@ public class Result {
     this.price = price;
   }
 
+  public String getImageUrl() {
+    return imageUrl;
+  }
+
+  public void setImageUrl(String imageUrl) {
+    this.imageUrl = imageUrl;
+  }
+
   @Override public String toString() {
     return "Result{" +
         "name='" + name + '\'' +
         ", price='" + price + '\'' +
+        ", imageUrl='" + imageUrl + '\'' +
         '}';
   }
 }

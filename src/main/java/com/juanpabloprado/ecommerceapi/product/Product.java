@@ -16,6 +16,7 @@ public class Product extends BaseEntity {
   private String name;
   private BigDecimal price;
   private String description;
+  private String imageUrl;
 
   @ManyToOne
   private Store store;
@@ -24,10 +25,11 @@ public class Product extends BaseEntity {
     super();
   }
 
-  public Product(String name, BigDecimal price, String description) {
+  public Product(String name, BigDecimal price, String description, String imageUrl) {
     this.name = name;
     this.price = price;
     this.description = description;
+    this.imageUrl = imageUrl;
   }
 
   public String getName() {
@@ -52,6 +54,14 @@ public class Product extends BaseEntity {
 
   public void setDescription(String description) {
     this.description = description;
+  }
+
+  public String getImageUrl() {
+    return imageUrl;
+  }
+
+  public void setImageUrl(String imageUrl) {
+    this.imageUrl = imageUrl;
   }
 
   public Store getStore() {

@@ -37,6 +37,7 @@ public class SourceServiceImpl implements SourceService {
     List<Result> recentResults = agentyClient.getRecentResults(AgentyClient.AMAZON_STORE);
     for (Result recentResult : recentResults) {
       Product product = productService.fromIntegration(recentResult);
+      // TODO: 9/20/17 Check if already exists before adding
       amazonStore.addProduct(product);
     }
     storeRepository.save(amazonStore);
